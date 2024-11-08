@@ -30,3 +30,25 @@ dt{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
+footer{
+    text-align: center;
+    color: #003366;
+}
+
+.destacado{
+    color: #003366;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#Localizacion{
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
