@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+</head>
+<body>
+    <header>Tablas</header>
+    <section>
+        <p>Uso de etiquetas <em>table</em> para el <i>manejo</i> de tablas</p>
+        <article>
+            <table frame="void" rules="all" class="tablaestilo" border="1" cellpadding="10">
+                <!-- Encabezado de la tabla -->
+                <caption>Tabla de usuarios</caption>
+                <colgroup>
+                    
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2" align="center">Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                
+                <!-- Cuerpo de la tabla -->
+                <tbody>
+                    <tr>
+                        <td>Diego</td>
+                        <td>Medina</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Laura</td>
+                        <td>Gómez</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>Pérez</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+
+                <!-- Pie de la tabla -->
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td>3</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </article>
+    </section>
+
+    <section>
+        <p>Por favor, complete los siguientes campos para registrarse:</p>
+        <form >
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="nombre">
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required placeholder="apellido">
+            </div>
+            <div>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required placeholder="contraseña">
+            </div>
+            <div>
+                <label for="tipoPersona">Tipo de Persona:</label>
+                <select id="tipoPersona" name="tipoPersona" required>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="docente">Docente</option>
+                    <option value="administrativo">Administrativo</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>
