@@ -3,52 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera página web</title>
+    <title>Maravillas del Mundo</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-
-    <div>
-        <section class="container">
-            <header>
-                <center> <h1>Maravillas del mundo Naturales</h1> </center>
-            </header>
-
+    <div class="main-container">
+        <header class="fondo">
+            <h1>Maravillas del Mundo Naturales</h1>
             <nav>
-                Home | <a href="https://www.nationalgeographicla.com/animales/2023/09/6-animales-que-puedes-encontrar-si-vacacionas-en-las-islas-galapagos">Galapagos</a> |<a href="../Trabajo_2_Portafolio_Personal/index2.html"> Mi portafolio</a> |
+                Home | <a href="https://www.nationalgeographicla.com/animales/2023/09/6-animales-que-puedes-encontrar-si-vacacionas-en-las-islas-galapagos">Galápagos</a> | 
+                <a href="../Trabajo_2_Portafolio_Personal/index2.html">Mi Portafolio</a>
             </nav>
-            Buscar: <input type="text" name="Buscar"> <button class="boton">Buscar</button>
+        </header>
 
-            <h2> Galápagos </h2>
+        <div class="content">
+            <!-- Sección principal -->
+            <section class="info">
+                <div class="cuadro">
+                    <h2>Galápagos</h2>
+                    <p>Las islas Galápagos son conocidas por su biodiversidad y por ser parte de la teoría de Darwin.</p>
+                    <img src="./IMAGENES/galapagos.jpg" alt="Galápagos" width="200">
+                </div>
+                <div class="cuadro">
+                    <h2>Cataratas del Iguazú</h2>
+                    <p>Las Cataratas del Iguazú son una maravilla natural en la frontera de Argentina y Brasil.</p>
+                    <img src="./IMAGENES/cascadas.webp" alt="Cataratas" width="200">
+                </div>
+            </section>
 
-            <p> Las islas <strong>Galápagos</strong> son un archipiélago <span class="clasespan"> volcánico del océano Pacífico. </span> Es conocido como uno de los destinos más <em>famosos del mundo</em>  para la observación de fauna. Es una provincia de Ecuador y se encuentra a unos 1,000 km desde sus costas. Su terreno aislado alberga una diversidad de especies animales y vegetales, muchas de ellas exclusivas. Charles Darwin lo visitó en 1835 y su observación de las especies de Galápagos inspiró posteriormente su teoría de la evolución. </p>
-            <a href="https://www.nationalgeographicla.com/animales/2023/09/6-animales-que-puedes-encontrar-si-vacacionas-en-las-islas-galapagos" target="_blank">
-                <figure>
-                <center><img src="./IMAGENES/galapagos.jpg" alt="Galápagos" weight="300px" height="300px"></center>
-                <figcaption>Galapagos National Geografic</figcaption>
-                </figure>
-            </a>
-            
-            <dl>
-                <dt>Localizacion Geografica</dt>
-                    <dd>Pais-Ecuador</li>
-                    <dd>Division - Galapagos</li>
-                <dt> Datos Generales</dt>
-                    <dd> Es una Maravilla</dd>
-            </dl>
-            <button class="boton">Visitar Pagina</button>
-        
-        </section>
+            <!-- Sección lateral -->
+            <aside class="lateral">
+                <h3>Datos Importantes</h3>
+                <ul>
+                    <li><strong>Galápagos:</strong> Ubicación: Ecuador</li>
+                    <li><strong>Cataratas:</strong> Frontera Argentina-Brasil</li>
+                    <li>Ambas son Patrimonios de la Humanidad.</li>
+                </ul>
+            </aside>
+        </div>
 
-        <section class="container">
-            <h2> Cataratas del Iguazú </h2>
-            <p>Las Cataratas Iguazú son uno de los atractivos naturales turísticos más importantes de la Argentina y el Brasil: más de 1.000.000 turistas visitan las Cataratas cada año. Las Cataratas del Iguazú fueron consagradas el Viernes 11 de Noviembre como una de las nuevas Siete Maravillas Naturales del Mundo.</p>
-            <a href="https://iguazuargentina.com/es/"><center> <img src="./IMAGENES/cascadas.webp" alt="Cataratas" weight="300px" height="300px" > </center></a>
-            <button class="boton">Visitar Pagina</button>
-        </section>
-
-        <footer>Diseñado Sebastian Lasso</footer>
-
+        <footer class="pie">
+            <div>QUITO - ECUADOR</div>
+            <div>Diseñado por Sebastian Lasso</div>
+            <div>CONTACTO</div>
+        </footer>
     </div>
 </body>
 </html>
