@@ -1,0 +1,92 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo del body */
+    color: #333;
+}
+
+/* Header */
+.title {
+    background-color: #3a7bd5; /* Azul para el título */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Navigation bar */
+.nav-bar {
+    background-color: #1b0453; /* Color del nav */
+    color: #f0f0f0;
+    
+}
+
+.nav-bar a {
+    color: #f0f0f0;
+    text-decoration: none;
+    
+}
+
+.content {
+    padding: 20px;
+}
+
+
+
+.container {
+    background-color: white; 
+    padding: 20px;
+    border: 1px solid #000000;
+
+}
+
+
+.article {
+    display: flex;
+    flex: 1 1 500 px;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.article-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffd700; 
+    color: #333;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.article p {
+    flex: 1;
+    margin: 0;
+    padding: 10px;
+}
+
+.images {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.images img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3a7bd5; /* Azul del footer */
+    color: white;
+}
