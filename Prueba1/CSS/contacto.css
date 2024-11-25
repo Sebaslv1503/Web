@@ -1,0 +1,75 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+.header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.main-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+
+.info-contacto h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.info-contacto p {
+    margin: 5px 0;
+}
+
+.info-contacto a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-contacto a:hover {
+    text-decoration: underline;
+}
+
+
+.formulario h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+
+
+
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
