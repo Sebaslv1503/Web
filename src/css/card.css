@@ -1,0 +1,89 @@
+
+*{
+    margin: 0;
+}
+body{
+    height: 100%;
+    background-color: #b2794d;
+}
+.card{
+    box-shadow: #000000 0px 0px 50px;
+    margin: auto;
+    margin-top: 40px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+}
+.class-header{
+    height: 350px;
+    background-image: url(../imagenes/camisetaADIDAS.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-style:solid;
+    
+}
+h4{
+    color: #000000;   
+}
+.card-content{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: red 5px solid;
+}
+.size{
+    margin-top: 40px;
+}
+.colors{
+    margin-top: 40px;
+}
+
+
+.rojo{
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 50%;
+    color: red;
+    width: 10px;
+    height: 10px;
+}
+.azul{
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 50%;
+    color: blue;
+    width: 10px;
+    height: 10px;
+}
+.blanco{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+    border-color: #000;
+    color: white;
+    width: 10px;
+    height: 10px;
+}
+.verde{
+    border: 1px solid greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+    color: greenyellow;
+    width: 10px;
+    height: 10px;
+}
+.class-body{
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+.class-contend h2{
+    border-bottom: rgb(0, 0, 0) 5px solid;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.class-contend h2:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    transition: all 0.2s ease; 
+}
