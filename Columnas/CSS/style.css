@@ -1,0 +1,12 @@
+#noticias{
+    width: 500px;
+    padding: 10px;
+    border: 1px solid seagreen;
+    columns: 4;
+    column-gap: 20px;
+    column-rule-style: dashed;
+    column-rule-color: seagreen;
+    column-rule-width: 10px;
+    column-rule: 1px solid seagreen;
+}
+
