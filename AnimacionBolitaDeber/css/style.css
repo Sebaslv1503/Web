@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #071113;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    color: yellow;
+}
+
+@keyframes moverBarra {
+    0%{
+        transform: translate(0px, 450px);
+    }
+    
+    16%{
+        transform: translate(226px, 450px);
+    }
+
+    32%{
+        transform: translate(453px, 450px);
+    }
+
+    49%{
+        transform: translate(680px, 450px);
+    }
+
+    66%{
+        transform: translate(453px, 450px);
+    }
+
+    83%{
+        transform: translate(226px, 450px);
+    }
+
+    100%{
+        transform: translate(0px, 450px);
+    }
+
+    
+    
+    
+}
+
+@keyframes mover {
+
+    25%{
+        transform: translate(370px, 450px) rotate(0deg);
+    }
+
+    50%{
+        transform: translate(770px, 0px) rotate(0deg);
+    }
+
+    75%{
+        transform: translate(420px, 450px) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(0px, 0px) rotate(0deg);
+    }  
+}
+
+.cuadro{
+    background-color: black;
+    height: 500px;
+    width: 800px;
+    border-radius: 5px;
+    border: 1px solid yellow;
+}
+
+
+.bolita{
+    background-color: #b51212;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    animation-iteration-count: infinite;
+
+    animation-duration: 5s;
+    
+    animation-name: mover;
+}
+
+.barra{
+    background-color: #1222b5;
+    width: 120px;
+    height: 20px;
+
+    
+
+    animation-duration: 5s;
+    
+    animation-timing-function: linear;
+
+    animation-name: moverBarra;
+
+    animation-iteration-count: infinite;
+}
