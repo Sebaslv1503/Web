@@ -14,7 +14,14 @@ const estudiantes = [
 function agregarCalificaciones(estudiantes, nuevasCalificaciones) {
     for (let i = 0; i < nuevasCalificaciones.length; i++) {
         if (estudiantes[i]) {
-            estudiantes[i].calificaciones = estudiantes[i].calificaciones.concat(nuevasCalificaciones[i]);
+            let nuevas = [];
+            for (let j = 0; j < estudiantes[i].calificaciones.length; j++) {
+                nuevas[j] = estudiantes[i].calificaciones[j];
+            }
+            for (let k = 0; k < nuevasCalificaciones[i].length; k++) {
+                nuevas[nuevas.length] = nuevasCalificaciones[i][k];
+            }
+            estudiantes[i].calificaciones = nuevas;
         }
     }
 }
@@ -77,7 +84,7 @@ function encontrarExtremos(estudiantes) {
 }
 
 const nuevasCalificaciones = [
-    [5], [15], [11], [19], [8], [14], [9], [17], [20], [13]
+    [20], [15], [11], [19], [8], [14], [9], [17], [20], [13]
 ];
 agregarCalificaciones(estudiantes, nuevasCalificaciones);
 clasificarEstudiantes(estudiantes);
