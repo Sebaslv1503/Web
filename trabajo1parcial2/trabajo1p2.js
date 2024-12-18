@@ -1,14 +1,14 @@
 const estudiantes = [
-    { nombre: "Ana", calificaciones: [14, 16, 18] },
-    { nombre: "Luis", calificaciones: [10, 12, 14] },
-    { nombre: "María", calificaciones: [8, 6, 10] },
+    { nombre: "Juan", calificaciones: [20, 20, 20] },
+    { nombre: "Sebastian", calificaciones: [10, 12, 14] },
+    { nombre: "Cristian", calificaciones: [8, 6, 10] },
     { nombre: "Carlos", calificaciones: [17, 18, 19] },
-    { nombre: "Sofía", calificaciones: [7, 9, 8] },
+    { nombre: "Renato", calificaciones: [7, 9, 8] },
     { nombre: "Miguel", calificaciones: [12, 13, 15] },
-    { nombre: "Lucía", calificaciones: [9, 8, 10] },
+    { nombre: "Hugo", calificaciones: [9, 8, 10] },
     { nombre: "Pedro", calificaciones: [16, 14, 15] },
-    { nombre: "Elena", calificaciones: [19, 18, 20] },
-    { nombre: "Jorge", calificaciones: [11, 13, 12] }
+    { nombre: "Martin", calificaciones: [19, 18, 20] },
+    { nombre: "Gaby", calificaciones: [11, 13, 12] }
 ];
 
 function agregarCalificaciones(estudiantes, nuevasCalificaciones) {
@@ -35,8 +35,6 @@ function clasificarEstudiantes(estudiantes) {
             estudiantes[i].clasificacion = "Excelente";
         } else if (promedio >= 14) {
             estudiantes[i].clasificacion = "Bueno";
-        } else if (promedio >= 8) {
-            estudiantes[i].clasificacion = "Aprobado";
         } else {
             estudiantes[i].clasificacion = "Reprobado";
         }
@@ -79,7 +77,7 @@ function encontrarExtremos(estudiantes) {
 }
 
 const nuevasCalificaciones = [
-    [20], [15], [11], [19], [8], [14], [9], [17], [20], [13]
+    [5], [15], [11], [19], [8], [14], [9], [17], [20], [13]
 ];
 agregarCalificaciones(estudiantes, nuevasCalificaciones);
 clasificarEstudiantes(estudiantes);
@@ -87,13 +85,13 @@ calcularEstadisticas(estudiantes);
 const extremos = encontrarExtremos(estudiantes);
 
 for (let i = 0; i < estudiantes.length; i++) {
-    console.log(`${estudiantes[i].nombre}:`);
-    console.log(`Clasificacion: ${estudiantes[i].clasificacion}`);
-    console.log(`Promedio: ${estudiantes[i].promedio.toFixed(2)}`);
-    console.log(`Nota mas baja: ${estudiantes[i].minimo}`);
-    console.log(`Nota mas alta: ${estudiantes[i].maximo}`);
+    console.log(estudiantes[i].nombre + ":");
+    console.log("Clasificacion: " + estudiantes[i].clasificacion);
+    console.log("Promedio: " + estudiantes[i].promedio.toFixed(2));
+    console.log("Nota mas baja: " + estudiantes[i].minimo);
+    console.log("Nota mas alta: " + estudiantes[i].maximo);
     console.log("---------------------------");
 }
 
-console.log(`El estudiante con el peor promedio es ${extremos.peor.nombre} con un promedio de ${extremos.peor.promedio.toFixed(2)}`);
-console.log(`El estudiante con el mejor promedio es ${extremos.mejor.nombre} con un promedio de ${extremos.mejor.promedio.toFixed(2)}`);
+console.log("El estudiante con el peor promedio es " + extremos.peor.nombre + " con un promedio de " + extremos.peor.promedio.toFixed(2));
+console.log("El estudiante con el mejor promedio es " + extremos.mejor.nombre + " con un promedio de " + extremos.mejor.promedio.toFixed(2));
