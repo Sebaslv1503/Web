@@ -33,9 +33,9 @@
       const mayor = determinarMayor(num1, num2);
       const esNum1Par = esPar(num1);
   
-      console.log(`Promedio: ${promedio}`);
-      console.log(`Mayor: ${mayor}`);
-      console.log(`¿El número ${num1} es par?: ${esNum1Par}`);
+      console.log(`Promedio:`+ promedio);
+      console.log(`Mayor: `+ mayor);
+      console.log(`¿El número `+ num1 + ` es par?:` + esNum1Par);
     } catch (error) {
       console.error(error.message);
     }
