@@ -29,9 +29,10 @@ function venderProducto(nombreBuscado, cantidad) {
 function aplicarDescuento(porcentaje) {
     for (let key in inventario) {
         let descuento = inventario[key].precio * (porcentaje / 100);
-        inventario[key].precio = Math.max(0, inventario[key].precio - descuento);
+        let nuevoPrecio = inventario[key].precio - descuento;
+        inventario[key].precio = nuevoPrecio >= 0 ? nuevoPrecio : 0;
     }
-    console.log('Se ha aplicado un descuento del' + porcentaje);
+    console.log('Se ha aplicado un descuento del ' + porcentaje +'%');
 }
 
 venderProducto("Laptop Gamer", 10); 
