@@ -30,7 +30,7 @@ function aplicarDescuento(porcentaje) {
     for (let key in inventario) {
         let descuento = inventario[key].precio * (porcentaje / 100);
         let nuevoPrecio = inventario[key].precio - descuento;
-        inventario[key].precio = nuevoPrecio >= 0 ? nuevoPrecio : 0;
+        inventario[key].precio = nuevoPrecio;
     }
     console.log('Se ha aplicado un descuento del ' + porcentaje +'%');
 }
