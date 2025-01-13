@@ -38,8 +38,11 @@ class Producto {
 
 class Inventario {
 
-    constructor(Producto=[]) {
-        this.inventario = Producto ;
+    constructor() {
+        this.inventario = [];
+    }
+    agregarProducto(producto) {
+        this.inventario.push(producto);
     }
     
     aplicarDescuento(categoria, porcentaje) {
@@ -82,7 +85,7 @@ class venta  {
                 inventario[i].cantidad = inventario[i].cantidad - cantidad;
                 console.log("Venta realizada con exito");
                 this.ingresos = this.ingresos + inventario[i].precio * cantidad;
-                
+               
             }
             else{
                 console.log("Stock insuficiente");
@@ -91,18 +94,24 @@ class venta  {
     }
 }
 
-let inventarioTienda = new Inventario({
-    producto1: new Producto("Laptop Gamer", 1500, 50, "Electronico"),
-    producto2: new Producto("Estuche celular", 5, 22, "Electronico"),
-    producto3: new Producto("Iphone 15", 1.0, 20, "Electronico"),
-    producto4: new Producto("TV LG", 1.5, 40, "Electronico"),
-    producto5: new Producto("Manzana", 10, 30, "Fruta"),
-    producto6: new Producto("Pera", 15, 25, "Fruta"),
-    producto7: new Producto("Camisa", 20, 15, "Ropa"),
-    producto8: new Producto("Pantalon", 30, 10, "Ropa"),
-});
+let inventarioTienda = new Inventario();
 
-console.log(inventarioTienda);
+let producto1 = new Producto("Laptop Gamer", 1500, 50, "Electronico")
+let producto2 = new Producto("Estuche celular", 5, 22, "Electronico")
+let producto3 = new Producto("Iphone 15", 1.0, 20, "Electronico")
+let producto4 = new Producto("TV LG", 1.5, 40, "Electronico")
+let producto5 = new Producto("Manzana", 10, 30, "Fruta")
+let producto6 = new Producto("Pera", 15, 25, "Fruta")
+let producto7 = new Producto("Camisa", 20, 15, "Ropa")
+
+inventarioTienda.agregarProducto(producto1);
+inventarioTienda.agregarProducto(producto2);
+inventarioTienda.agregarProducto(producto3);
+inventarioTienda.agregarProducto(producto4);
+inventarioTienda.agregarProducto(producto5);
+inventarioTienda.agregarProducto(producto6);
+inventarioTienda.agregarProducto(producto7);
+
 inventarioTienda.aplicarDescuento("Electronico", 10);
 inventarioTienda.listarProductosPorPrecio();
 inventarioTienda.filtrarProductos("Ropa");
@@ -111,4 +120,8 @@ inventarioTienda.filtrarProductos("Ropa");
 
 let ventaTienda = new venta();
 
+ventaTienda.realizarVenta("Laptop Gamer", 1);
+ventaTienda.realizarVenta("Camisa", 2);
+ventaTienda.realizarVenta("Pantalon", 1);
+console.log(ventaTienda.ingresos);
 
