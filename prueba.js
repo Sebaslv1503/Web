@@ -37,13 +37,15 @@ class Producto {
 }
 
 class Inventario {
-    constructor(Producto) {
-        this.inventario = Producto=[];
+
+    constructor(Producto=[]) {
+        this.inventario = Producto ;
     }
+    
     aplicarDescuento(categoria, porcentaje) {
-        for (let i in inventario) {
-            if (inventario[i].categoria === categoria) {
-                inventario[i].precio = inventario[i].precio * (1 - porcentaje / 100);
+        for (let i in this.inventario) {
+            if (this.inventario[i].categoria === categoria) {
+                this.inventario[i].precio = this.inventario[i].precio * (1 - porcentaje / 100);
             }
         }
     }
@@ -79,6 +81,8 @@ class venta  {
             if(inventario[i].cantidad >= cantidad && inventario[i].nombreProducto == nombreProducto){
                 inventario[i].cantidad = inventario[i].cantidad - cantidad;
                 console.log("Venta realizada con exito");
+                this.ingresos = this.ingresos + inventario[i].precio * cantidad;
+                
             }
             else{
                 console.log("Stock insuficiente");
@@ -99,12 +103,11 @@ let inventarioTienda = new Inventario({
 });
 
 console.log(inventarioTienda);
-
-inventarioTienda.aplicarDescuento("Electronico", 20);
-
+inventarioTienda.aplicarDescuento("Electronico", 10);
 inventarioTienda.listarProductosPorPrecio();
-
 inventarioTienda.filtrarProductos("Ropa");
+
+
 
 let ventaTienda = new venta();
 

@@ -100,11 +100,7 @@ let inventarioTienda = new Inventario({
 
 console.log(inventarioTienda);
 
-inventarioTienda.aplicarDescuento("Electronico", 20);
 
-inventarioTienda.listarProductosPorPrecio();
-
-inventarioTienda.filtrarProductos("Ropa");
 
 let ventaTienda = new venta();
 
