@@ -21,7 +21,7 @@
     return numero % 2 === 0;
   };
   
-  (() => {
+   (() => {
     try {
       
       const num1 = 10;

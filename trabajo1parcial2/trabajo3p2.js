@@ -4,8 +4,10 @@
 
 
 const inventario = {
-    producto1: { nombre: "Laptop Gamer", precio: 1500, cantidad: 50 }, producto2: { nombre: "Estuche celular", precio: 5, cantidad: 22 }, 
-    producto3: { nombre: "Iphone 15 ", precio: 1.0, cantidad: 20 }, producto4: { nombre: "TV LG", precio: 1.5, cantidad: 40 },
+    producto1: { nombre: "Laptop Gamer", precio: 1500, cantidad: 50 }, 
+    producto2: { nombre: "Estuche celular", precio: 5, cantidad: 22 }, 
+    producto3: { nombre: "Iphone 15 ", precio: 1.0, cantidad: 20 }, 
+    producto4: { nombre: "TV LG", precio: 1.5, cantidad: 40 },
 };
 
 Object.seal(inventario);
