@@ -138,7 +138,7 @@ try {
     let producto1 = new Producto('Camisa', 150, 'Ropa', 4);
     let producto2 = new Producto('pantalon', 300, 'Ropa Usada', 2);
     let producto3 = new Producto('Zapatos', 100, 'Calzado', 3);
-
+    
     console.log(producto1.toString());
     console.log(producto2.toString());
     console.log(producto3.toString());
