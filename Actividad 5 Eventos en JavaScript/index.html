@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Configuración</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 24px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #toggle-panel-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #toggle-panel-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #config-panel {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            background: #f9f9f9;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, textarea, select, button {
+            margin-top: 5px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #item-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .list-item {
+            padding: 10px;
+            background: #f0f0f0;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .list-item:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Panel de Configuración Dinámico</header>
+    <main>
+        <h1 id="page-title">Título Principal</h1>
+        <button id="toggle-panel-btn">Mostrar Panel de Configuración</button>
+
+        <div id="config-panel">
+            <form id="config-form">
+                <label for="title-input">Cambiar Título:</label>
+                <input type="text" id="title-input" placeholder="Escribe el nuevo título">
+
+                <label for="bg-color-input">Cambiar Fondo:</label>
+                <input type="color" id="bg-color-input">
+
+                <label for="comment-checkbox">Habilitar Área de Comentarios:</label>
+                <input type="checkbox" id="comment-checkbox">
+
+                <textarea id="comment-area" disabled></textarea>
+            </form>
+
+            <h2>Lista de Elementos</h2>
+            <ul id="item-list">
+                <li class="list-item">Elemento 1</li>
+                <li class="list-item">Elemento 2</li>
+                <li class="list-item">Elemento 3</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        // Selección de elementos usando getElementById
+        const togglePanelBtn = document.getElementById('toggle-panel-btn');
+        const configPanel = document.getElementById('config-panel');
+        const titleInput = document.getElementById('title-input');
+        const bgColorInput = document.getElementById('bg-color-input');
+        const commentCheckbox = document.getElementById('comment-checkbox');
+        const commentArea = document.getElementById('comment-area');
+        const itemList = document.getElementById('item-list');
+        const pageTitle = document.getElementById('page-title');
+
+        // Mostrar/Ocultar el panel
+        togglePanelBtn.addEventListener('click', () => {
+            const isPanelVisible = configPanel.style.display === 'block';
+            configPanel.style.display = isPanelVisible ? 'none' : 'block';
+            togglePanelBtn.textContent = isPanelVisible ? 'Mostrar Panel de Configuración' : 'Ocultar Panel de Configuración';
+        });
+
+        // Cambiar el título dinámicamente
+        titleInput.addEventListener('input', () => {
+            pageTitle.textContent = titleInput.value.trim() || 'Título Principal';
+        });
+
+        // Cambiar el color de fondo
+        bgColorInput.addEventListener('input', () => {
+            document.body.style.backgroundColor = bgColorInput.value;
+        });
+
+        // Habilitar/Deshabilitar área de comentarios
+        commentCheckbox.addEventListener('change', () => {
+            commentArea.disabled = !commentCheckbox.checked;
+        });
+
+        // Eliminar elementos de la lista
+        itemList.addEventListener('click', (event) => {
+            if (event.target.classList.contains('list-item')) {
+                itemList.removeChild(event.target);
+            }
+        });
+    </script>
+</body>
+
+</html>

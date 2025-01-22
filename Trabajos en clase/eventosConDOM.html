@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="entrar()">
+    
+   <!-- Este evento se ejecuta cuando se termina de cargar la pagina--> 
+
+    <h1 id="Titulo" onclick="this.innerHTML='Nuevo Titulo'">Ejemplo1</h1>
+    <h1 id="titulo" onclick="cambiarTexto(this)">Evento onclick</h1>
+    <h1 id="mostrar"></h1>
+    <h1 id="titulo4" onmouseover="rojo(this)" onmouseout="azul(this)">EVENTO CAMBIO DE COLOR</h1>
+    <h1 id="titulo4" onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">EVENTO CAMBIO DE COLOR 2</h1>
+    Nombre: <input type="text" onchange="convertir(this)"></input>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"></input>
+    <br>
+    <script>
+        function cambiarTexto(params){
+            //titulo.innerHTML="Nuevo Titulo";
+            document.getElementById('titulo').innerHTML='OTRO TITULO';
+        }
+        function entrar(){
+            alert('Entrando a la pagina web')
+        }
+        /*
+        Manejo de Cookies
+        Son archivos que guardan informacion cuando navegamos en la web
+        Validar un formato(llave, valor)
+        */
+
+        let texto='';
+        if(navigator.cookieEnabled){
+            texto='Cookies estan habilitadas';
+        }else{
+            texto='Cookies estan inhabilitadas';
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+
+        function rojo(params){
+            params.style.color="red";
+        }
+        function convertir(params){
+            params.value=params.value.toUpperCase();
+        }
+        function azul(params){
+            params.style.color="blue";
+        }
+        function verde(params){
+            params.style.color="green";
+        }
+        function cambiar(params){
+            elementInput.style.backgroundColor="yellow";
+        }
+        function regresar(params){
+            elementInput.style.backgroundColor="white";
+        }
+    </script>
+</body>
+</html>
