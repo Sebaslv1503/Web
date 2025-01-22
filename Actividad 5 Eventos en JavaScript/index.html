@@ -31,7 +31,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        #toggle-panel-btn {
+        #boton-panel {
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
@@ -43,11 +43,11 @@
             cursor: pointer;
         }
 
-        #toggle-panel-btn:hover {
+        #boton-panel:hover {
             background-color: #0056b3;
         }
 
-        #config-panel {
+        #panel {
             display: none;
             padding: 20px;
             border: 1px solid #ddd;
@@ -62,7 +62,7 @@
             display: block;
         }
 
-        input, textarea, select, button {
+        input, textarea {
             margin-top: 5px;
             padding: 8px;
             width: 100%;
@@ -75,13 +75,13 @@
             resize: none;
         }
 
-        #item-list {
+        #lista-elementos {
             list-style: none;
             padding: 0;
             margin: 20px 0;
         }
 
-        .list-item {
+        .elemento {
             padding: 10px;
             background: #f0f0f0;
             margin-bottom: 5px;
@@ -90,7 +90,7 @@
             text-align: center;
         }
 
-        .list-item:hover {
+        .elemento:hover {
             background: #e0e0e0;
         }
     </style>
@@ -99,69 +99,69 @@
 <body>
     <header>Panel de Configuración Dinámico</header>
     <main>
-        <h1 id="page-title">Título Principal</h1>
-        <button id="toggle-panel-btn">Mostrar Panel de Configuración</button>
+        <h1 id="titulo">Título Principal</h1>
+        <button id="boton-panel">Mostrar Panel de Configuración</button>
 
-        <div id="config-panel">
-            <form id="config-form">
-                <label for="title-input">Cambiar Título:</label>
-                <input type="text" id="title-input" placeholder="Escribe el nuevo título">
+        <div id="panel">
+            <form id="formulario">
+                <label for="entrada-titulo">Cambiar Título:</label>
+                <input type="text" id="entrada-titulo" placeholder="Escribe el nuevo título">
 
-                <label for="bg-color-input">Cambiar Fondo:</label>
-                <input type="color" id="bg-color-input">
+                <label for="entrada-color">Cambiar Fondo:</label>
+                <input type="color" id="entrada-color">
 
-                <label for="comment-checkbox">Habilitar Área de Comentarios:</label>
-                <input type="checkbox" id="comment-checkbox">
+                <label for="activar-comentarios">Habilitar Área de Comentarios:</label>
+                <input type="checkbox" id="activar-comentarios">
 
-                <textarea id="comment-area" disabled></textarea>
+                <textarea id="area-comentarios" disabled></textarea>
             </form>
 
             <h2>Lista de Elementos</h2>
-            <ul id="item-list">
-                <li class="list-item">Elemento 1</li>
-                <li class="list-item">Elemento 2</li>
-                <li class="list-item">Elemento 3</li>
+            <ul id="lista-elementos">
+                <li class="elemento">Elemento 1</li>
+                <li class="elemento">Elemento 2</li>
+                <li class="elemento">Elemento 3</li>
             </ul>
         </div>
     </main>
 
     <script>
-        // Selección de elementos usando getElementById
-        const togglePanelBtn = document.getElementById('toggle-panel-btn');
-        const configPanel = document.getElementById('config-panel');
-        const titleInput = document.getElementById('title-input');
-        const bgColorInput = document.getElementById('bg-color-input');
-        const commentCheckbox = document.getElementById('comment-checkbox');
-        const commentArea = document.getElementById('comment-area');
-        const itemList = document.getElementById('item-list');
-        const pageTitle = document.getElementById('page-title');
+       
+        const botonPanel = document.getElementById('boton-panel');
+        const panel = document.getElementById('panel');
+        const entradaTitulo = document.getElementById('entrada-titulo');
+        const entradaColor = document.getElementById('entrada-color');
+        const activarComentarios = document.getElementById('activar-comentarios');
+        const areaComentarios = document.getElementById('area-comentarios');
+        const listaElementos = document.getElementById('lista-elementos');
+        const titulo = document.getElementById('titulo');
 
-        // Mostrar/Ocultar el panel
-        togglePanelBtn.addEventListener('click', () => {
-            const isPanelVisible = configPanel.style.display === 'block';
-            configPanel.style.display = isPanelVisible ? 'none' : 'block';
-            togglePanelBtn.textContent = isPanelVisible ? 'Mostrar Panel de Configuración' : 'Ocultar Panel de Configuración';
+        
+        botonPanel.addEventListener('click', () => {
+            const panelVisible = panel.style.display === 'block';
+            panel.style.display = panelVisible ? 'none' : 'block';
+            botonPanel.textContent = panelVisible ? 'Mostrar Panel de Configuración' : 'Ocultar Panel de Configuración';
         });
 
-        // Cambiar el título dinámicamente
-        titleInput.addEventListener('input', () => {
-            pageTitle.textContent = titleInput.value.trim() || 'Título Principal';
+        
+        entradaTitulo.addEventListener('input', () => {
+            titulo.textContent = entradaTitulo.value.trim() || 'Título Principal';
         });
 
-        // Cambiar el color de fondo
-        bgColorInput.addEventListener('input', () => {
-            document.body.style.backgroundColor = bgColorInput.value;
+        
+        entradaColor.addEventListener('input', () => {
+            document.body.style.backgroundColor = entradaColor.value;
         });
 
-        // Habilitar/Deshabilitar área de comentarios
-        commentCheckbox.addEventListener('change', () => {
-            commentArea.disabled = !commentCheckbox.checked;
+        
+        activarComentarios.addEventListener('change', () => {
+            areaComentarios.disabled = !activarComentarios.checked;
         });
 
-        // Eliminar elementos de la lista
-        itemList.addEventListener('click', (event) => {
-            if (event.target.classList.contains('list-item')) {
-                itemList.removeChild(event.target);
+        
+        listaElementos.addEventListener('click', (evento) => {
+            if (evento.target.classList.contains('elemento')) {
+                listaElementos.removeChild(evento.target);
             }
         });
     </script>
