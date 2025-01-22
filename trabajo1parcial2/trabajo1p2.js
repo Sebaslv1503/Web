@@ -1,5 +1,5 @@
 const estudiantes = [
-    { nombre: "Juan", calificaciones: [20, 20, 20] },
+    { nombre: "Juan", calificaciones: [4, 4, 4] },
     { nombre: "Sebastian", calificaciones: [10, 12, 14] },
     { nombre: "Cristian", calificaciones: [8, 6, 10] },
     { nombre: "Carlos", calificaciones: [17, 18, 19] },

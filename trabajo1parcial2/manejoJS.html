@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM en JavaScript</title>
+</head>
+<body>
+    <h1 id="Titulo">Manejo del DOM en JavaScript</h1>
+    <button type="button" onclick="mostrar()">Mostrar</button>
+    <br>
+    <img id="imagen" src='https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Science/animals/articles/animales-domesticos/guinea-pig.jpg' alt="imagen" width="300">
+    <script>
+        
+        const imagenes = [
+            'https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_2686438.webp?w=546&h=308',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcWr6Q9wwNSpolraAlAcmBkjTDObRlr3Ncvg&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6GuoEFbvz-TadDfpqVJmHykzyY75dCwqHg&s',
+            'https://www.ngenespanol.com/wp-content/uploads/2024/11/en-el-mundo-de-los-animales-los-colores-empezaron-a-desarrollarse-hace-100-millones-de-anos-770x431.jpg',
+            'https://educa30.b-cdn.net/wp-content/uploads/2016/04/animales-destacada.jpg'
+        ];
+        
+        let contador = 0; 
+
+        
+        function cambiarImagen() {
+            
+            document.getElementById('imagen').src = imagenes[contador];
+            contador = (contador + 1) % imagenes.length;
+            setInterval(cambiarImagen, 2000); 
+            
+        }
+
+        
+        
+
+        
+        function mostrar() {
+            document.getElementById('Titulo').innerHTML = 'Animalitos';
+            document.getElementById('Titulo').style.color = 'blue';
+            cambiarImagen(); 
+        }
+    </script>    
+</body>
+</html>
+
