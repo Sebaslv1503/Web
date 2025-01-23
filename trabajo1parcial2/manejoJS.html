@@ -23,12 +23,16 @@
         let contador = 0; 
 
         
+        
         function cambiarImagen() {
             
-            document.getElementById('imagen').src = imagenes[contador];
-            contador = (contador + 1) % imagenes.length;
-            setInterval(cambiarImagen, 2000); 
+            const imagen = document.getElementById('imagen');
             
+            imagen.src = imagenes[contador];
+            
+            contador = (contador + 1) % imagenes.length;
+            
+            setInterval(cambiarImagen, 2000);
         }
 
         
